@@ -94,10 +94,28 @@ public class LinkedList {
      */
     public void popLast() {
         Node temp = head;
-        while (temp.next.next != null) {  //1,2,3,4,5
+        while (temp.next.next != null) {
             temp = temp.next;
         }
         temp.next = null;
         tail = temp;
+    }
+
+    /**
+     * Method to find node with key value
+     *
+     * @param key to pass in the value of key
+     */
+    public void search(int key) {
+        Node temp = head;
+        int nodeCount = 1;
+        while (temp != null) {
+            if (temp.data == key) {
+                break;
+            }
+            nodeCount++;
+            temp = temp.next;
+        }
+        System.out.println("The Node with key value " + key + " is " + nodeCount);
     }
 }
