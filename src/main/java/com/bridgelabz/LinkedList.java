@@ -1,7 +1,6 @@
 package com.bridgelabz;
 
 public class LinkedList {
-
     Node head;
     Node tail;
 
@@ -21,7 +20,6 @@ public class LinkedList {
             this.head = newNode;
             newNode.next = temp;
         }
-
         return newNode;
     }
 
