@@ -94,7 +94,7 @@ public class LinkedList {
      */
     public void popLast() {
         Node temp = head;
-        while (temp.next.next != null) {  //1,2,3,4,5
+        while (temp.next.next != null) {
             temp = temp.next;
         }
         temp.next = null;
