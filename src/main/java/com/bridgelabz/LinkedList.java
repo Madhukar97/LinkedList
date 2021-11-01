@@ -88,4 +88,16 @@ public class LinkedList {
             head = head.next;
         }
     }
+
+    /**
+     * Method to pop the Last element of LinkedList
+     */
+    public void popLast() {
+        Node temp = head;
+        while (temp.next.next != null) {  //1,2,3,4,5
+            temp = temp.next;
+        }
+        temp.next = null;
+        tail = temp;
+    }
 }
