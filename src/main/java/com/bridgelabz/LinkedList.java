@@ -78,4 +78,15 @@ public class LinkedList {
             temp = temp.next;
         }
     }
+
+    /**
+     * Method to pop the 1st element of LinkedList
+     */
+    public void pop() {
+        if (head == null) {
+            System.out.println("LinkedList is empty");
+        } else {
+            head = head.next;
+        }
+    }
 }
