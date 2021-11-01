@@ -42,7 +42,6 @@ public class LinkedList {
         return newNode;
     }
 
-
     /**
      * Method to display the current LinkedList
      */
