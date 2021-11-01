@@ -24,6 +24,25 @@ public class LinkedList {
     }
 
     /**
+     * method to create a Linked List
+     * append method is used to add data 1st in 1st out
+     *
+     * @param data integer to be added in linked list
+     */
+    public Node append(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
+            Node temp = tail;
+            this.tail = newNode;
+            temp.next = newNode;
+        }
+        return newNode;
+    }
+
+    /**
      * Method to display the current LinkedList
      */
     public void showLinkedList() {
