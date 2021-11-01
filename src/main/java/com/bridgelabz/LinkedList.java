@@ -68,7 +68,7 @@ public class LinkedList {
         Node insertNode = new Node(current);
         Node temp = head;
         while (temp != null) {
-            if (temp.data == 56 && temp.next.data == 70) {
+            if (temp.data == previous && temp.next.data == next) {
                 Node afterInsert = temp.next;
                 temp.next = insertNode;
                 temp.next.next = afterInsert;
@@ -117,5 +117,25 @@ public class LinkedList {
             temp = temp.next;
         }
         System.out.println("The Node with key value " + key + " is " + nodeCount);
+    }
+
+    /**
+     * Method to insert value after specific Node
+     *
+     * @param previous takes in the value of Node after which insertion should be done
+     * @param current  takes in the insertion value
+     */
+    public void insertAfterElement(int previous, int current) {
+        Node insertNode = new Node(current);
+        Node temp = head;
+        while (temp != null) {
+            if (temp.data == previous) {
+                Node afterInsert = temp.next;
+                temp.next = insertNode;
+                temp.next.next = afterInsert;
+                break;
+            }
+            temp = temp.next;
+        }
     }
 }
