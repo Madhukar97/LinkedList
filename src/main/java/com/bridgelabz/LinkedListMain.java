@@ -16,11 +16,9 @@ public class LinkedListMain {
         System.out.println("The LinkedList after inserting 40 after 30 is: ");
         obj.size();
         obj.showLinkedList();
-        obj.delete(56);
+        obj.delete(40);
         obj.size();
         System.out.println("The LinkedList after deleting 40 is: ");
         obj.showLinkedList();
-
-
     }
 }
