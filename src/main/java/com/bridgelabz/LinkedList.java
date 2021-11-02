@@ -69,7 +69,7 @@ public class LinkedList {
         Node insertNode = new Node(current);
         Node temp = head;
         while (temp != null) {
-            if (temp.data == 56 && temp.next.data == 70) {
+            if (temp.data == previous && temp.next.data == next) {
                 Node afterInsert = temp.next;
                 temp.next = insertNode;
                 temp.next.next = afterInsert;
