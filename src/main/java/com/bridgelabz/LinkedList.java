@@ -138,4 +138,39 @@ public class LinkedList {
             temp = temp.next;
         }
     }
+
+    /**
+     * Method to delete an element
+     *
+     * @param key takes in the key which should be deleted from LinkedList
+     */
+    public void delete(int key) {
+        Node temp = head;               //56,30,40,70
+        if (head.data == key) {
+            pop();
+        } else if (tail.data == key) {
+            popLast();
+        } else {
+            while (temp != null) {
+                if (temp.next.data == key) {
+                    temp.next = temp.next.next;
+                    break;
+                }
+                temp = temp.next;
+            }
+        }
+    }
+
+    /**
+     * Method to find the size of LinkedList
+     */
+    public void size() {
+        Node temp = head;
+        int nodeCount = 0;
+        while (temp != null) {
+            nodeCount++;
+            temp = temp.next;
+        }
+        System.out.println("The size of LinkedList is: " + nodeCount);
+    }
 }
