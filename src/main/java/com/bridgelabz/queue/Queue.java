@@ -6,19 +6,34 @@ public class Queue<T> {
 
     LinkedList<T> linkedList = new LinkedList<>();
 
-    public void peak(){
+    public void peak() {
         System.out.println(linkedList.head.data);
     }
 
-    public void enqueue(T data){
+    /**
+     * Enqueue method is internally calling the append method in LinkedList
+     * @param data takes in the data to be added as parameter
+     */
+    public void enqueue(T data) {
         linkedList.append(data);
     }
 
-    public boolean isEmpty(){
-        return linkedList.head==null;
+    /**
+     * Method dequeue is internally calling the pop method in LinkedList
+     * @return returns the popped value
+     */
+    public T dequeue() {
+        return linkedList.pop();
     }
 
-    public void size(){
+    public boolean isEmpty() {
+        return linkedList.head == null;
+    }
+
+    /**
+     * Size method is internally calling the LinkedList size method
+     */
+    public void size() {
         linkedList.size();
     }
 
@@ -29,5 +44,8 @@ public class Queue<T> {
         obj.enqueue(70);
         obj.peak();
         obj.size();
+        obj.dequeue();
+        obj.size();
+        obj.peak();
     }
 }
