@@ -1,11 +1,11 @@
 package com.bridgelabz;
 
-public class Node {
+public class Node<T> {
 
-    int data;
-    Node next;
+    public T data;
+    public Node<T> next;
 
-    public Node(int data) {
+    public Node(T data) {
         this.data = data;
         this.next = null;
     }
